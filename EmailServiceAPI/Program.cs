@@ -27,11 +27,6 @@ namespace EmailServiceAPI
 
             builder.Services.AddScoped<IEmailSender, EmailSender>();
 
-            builder.Services.Configure<FormOptions>(o => {
-                o.ValueLengthLimit = int.MaxValue;
-                o.MultipartBodyLengthLimit = int.MaxValue;
-                o.MemoryBufferThreshold = int.MaxValue;
-            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
